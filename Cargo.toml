@@ -1,6 +1,7 @@
 [package]
 name = "r2d2_redis"
-version = "0.14.1-alpha.0"
+version = "0.15.0"
+edition = "2021"
 authors = [
     "Steven Fackler <sfackler@gmail.com>",
     "Nev Delap <nevdelap@gmail.com>",
@@ -13,7 +14,8 @@ repository = "https://github.com/sorccu/r2d2-redis"
 documentation = "https://docs.rs/r2d2_redis/0.14.0"
 keywords = ["redis", "pool", "database", "r2d2"]
 include = ["src/**/*", "LICENSE", "Cargo.toml"]
+resolver = "2"
 
 [dependencies]
-r2d2 = "0.8"
-redis = "0.20.0"
+r2d2 = "^0.8"
+redis = "^0.25"

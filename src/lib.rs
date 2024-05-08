@@ -1,9 +1,6 @@
 //! Redis support for the `r2d2` connection pool.
-#![doc(html_root_url = "https://docs.rs/r2d2_redis/0.14.0")]
+#![doc(html_root_url = "https://docs.rs/r2d2_redis/0.15.0")]
 #![warn(missing_docs)]
-
-pub extern crate r2d2;
-pub extern crate redis;
 
 use std::error;
 use std::error::Error as _StdError;
@@ -29,12 +26,6 @@ impl fmt::Display for Error {
 }
 
 impl error::Error for Error {
-    fn description(&self) -> &str {
-        match *self {
-            Error::Other(ref err) => err.description(),
-        }
-    }
-
     fn cause(&self) -> Option<&dyn error::Error> {
         match *self {
             Error::Other(ref err) => {
