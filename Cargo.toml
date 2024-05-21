@@ -17,5 +17,5 @@ include = ["src/**/*", "LICENSE", "Cargo.toml"]
 resolver = "2"
 
 [dependencies]
-r2d2 = "^0.8"
+r2d2 = { git = "https://github.com/GopherJ/r2d2", rev = "976ca74a74871d78764da2a040edcadad1af9be9" }
 redis = "^0.25"
